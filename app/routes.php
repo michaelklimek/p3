@@ -17,27 +17,31 @@ Route::get('/', function()
 });
 
 */
-
+// Display Main Page
 Route::get('/', function() 
 {
 	return 'Developers Best Friend';
 });
 
+// Display Paragraph Generator Page
 Route::post('/paragraph', function()
 {
 	return 'Paragraph Generator';
 });
 
+//Display results from paragraph form
 Route::get('/paragraph/result', function() 
 {
 	return 'Paragraph Results';
 });
 
+//Display User Generator Page
 Route::post('/user', function()
 {
 	return 'User Generator';
 });
 
+//Display results from user form
 Route::get('/user/result', function()
 {
 	return 'User Results';
