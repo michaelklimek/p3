@@ -13,7 +13,7 @@ I will be doing the demo for this project in my section on Wednesday, October 29
 No login required.
 
 ##List of plugins, libraries, packages or outside code used in the project:
-*Lorem Ipsum Generator: https://packagist.org/packages/badcow/lorem-ipsum/ This is the paragraph generator that is used in Project 3.
-*Faker: https://packagist.org/packages/fzaninotto/faker/ This is the random user generator that is used in Project 3.
+* Lorem Ipsum Generator: https://packagist.org/packages/badcow/lorem-ipsum/ This is the paragraph generator that is used in Project 3.
+* Faker: https://packagist.org/packages/fzaninotto/faker/ This is the random user generator that is used in Project 3.
 * CSS-Tricks Button Maker: http://css-tricks.com/examples/ButtonMaker/#/ This CSS styled button was used for the menu buttons on the on _master.blade.php file.
 
