@@ -23,8 +23,8 @@
 	$faker = Faker\Factory::create();
 
 	// generate data by accessing properties
-	for ($i=0; $i < 10; $i++) {
-  	echo $faker->name, "\n";
+	for ($i=0; $i < $query; $i++) {
+  	echo $faker->name, "<br>";
 }
 
 ?>
