@@ -6,7 +6,7 @@
 
 @section('body')
 	<h1>User Generator</h1>
-	<p>Select how many users you would like to generate</p>
+	<p>(Select how many users you would like to generate)</p>
 	{{ Form::open(array(
 		'url' => 'user',
 		'method' => 'GET')) }}
@@ -15,6 +15,19 @@
 		{{ Form::submit('Generate') }}
 	{{ Form::close() }}
 
+<?php
 
+	$query = Input::get('users');
+
+	// use the factory to create a Faker\Generator instance
+	$faker = Faker\Factory::create();
+
+	// generate data by accessing properties
+	for ($i=0; $i < $query; $i++) {
+  	$fakeName = $faker->name;
+  	echo "<p>" . $fakeName . "</p>";
+}
+
+?>
 
 @stop

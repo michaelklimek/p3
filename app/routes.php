@@ -26,26 +26,11 @@ Route::get('/', function()
 // Display Paragraph Generator Page
 Route::get('/paragraph', function()
 {
-
-	$query = Input::get('paragraphs');
-	$generator = new Badcow\LoremIpsum\Generator();
-	$paragraphs = $generator->getParagraphs($query);
-	echo implode('<p class="results">', $paragraphs);
-
 	return View::make('paragraph');
 });
 
 //Display User Generator Page
 Route::get('/user', function()
 {
-	$query = Input::get('users');
-
-	// use the factory to create a Faker\Generator instance
-	$faker = Faker\Factory::create();
-
-	// generate data by accessing properties
-	for ($i=0; $i < $query; $i++) {
-  	echo "<div class='results'><span>".$faker->name."</span></div>", "<br>";
-}
 	return View::make('user');
 });

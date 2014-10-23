@@ -6,7 +6,7 @@
 
 @section('body')
 	<h1>Paragraph Generator</h1>
-	<p>Select how many paragraphs you would like to generate</p>
+	<p>(Select how many paragraphs you would like to generate)</p>
 	{{ Form::open(array(
 		'url' => 'paragraph',
 		'method' => 'GET')) }}
@@ -16,5 +16,10 @@
 	{{ Form::close() }}
 	
 
-
+	<?php
+		$query = Input::get('paragraphs');
+		$generator = new Badcow\LoremIpsum\Generator();
+    	$paragraphs = $generator->getParagraphs($query);
+    	echo implode('<p>', $paragraphs);
+   	?>
 @stop
