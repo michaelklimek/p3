@@ -14,4 +14,5 @@
 		{{ Form::text('users') }}
 		{{ Form::submit('Generate') }}
 	{{ Form::close() }}
+
 @stop

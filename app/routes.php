@@ -24,9 +24,15 @@ Route::get('/', function()
 });
 
 // Display Paragraph Generator Page
-Route::get('/paragraph', function()
+Route::get('/paragraph/{number?}', function($number = null)
 {
-	return View::make('paragraph');
+	if ($number == null) {
+		return 'You must input a number from 1 to 99.';
+	} elseif ($number >= 1 && <= 99) {
+		return View::make('paragraph');
+	} else {
+		return 'Only numbers between 1 to 99 are accepted.';
+	}
 });
 
 //Display results from paragraph form
