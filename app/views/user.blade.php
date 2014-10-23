@@ -11,6 +11,7 @@
 		'url' => 'user',
 		'method' => 'GET')) }}
 		{{ Form::label('number_user', 'Number of Users to Generate (Max 99): ') }}
+		{{ Form::text('users') }}
 		{{ Form::submit('Generate') }}
 	{{ Form::close() }}
 @stop
