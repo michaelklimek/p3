@@ -16,12 +16,17 @@
 	{{ Form::close() }}
 
 <?php
-	require_once '/path/to/Faker/src/autoload.php';
+
 	$query = Input::get('users');
 
-	for ($i=0; $i < $query; $i++) {
- 		echo $faker->name, "\n";
-	}
+	// use the factory to create a Faker\Generator instance
+	$faker = Faker\Factory::create();
+
+	// generate data by accessing properties
+	for ($i=0; $i < 10; $i++) {
+  	echo $faker->name, "\n";
+}
+
 ?>
 
 @stop
