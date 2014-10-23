@@ -20,13 +20,13 @@ Route::get('/', function()
 // Display Main Page
 Route::get('/', function() 
 {
-	return 'Developers Best Friend';
+	return View::make('_master');
 });
 
 // Display Paragraph Generator Page
-Route::post('/paragraph', function()
+Route::get('/paragraph', function()
 {
-	return 'Paragraph Generator';
+	return View::make('paragraph');
 });
 
 //Display results from paragraph form
@@ -36,9 +36,9 @@ Route::get('/paragraph/result', function()
 });
 
 //Display User Generator Page
-Route::post('/user', function()
+Route::get('/user', function()
 {
-	return 'User Generator';
+	return View::make('user');
 });
 
 //Display results from user form
