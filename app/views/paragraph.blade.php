@@ -16,10 +16,5 @@
 	{{ Form::close() }}
 	
 
-	<?php
-		$query = Input::get('paragraphs');
-		$generator = new Badcow\LoremIpsum\Generator();
-    	$paragraphs = $generator->getParagraphs($query);
-    	echo implode('<p>', $paragraphs);
-   	?>
+
 @stop

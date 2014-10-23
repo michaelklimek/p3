@@ -26,6 +26,12 @@ Route::get('/', function()
 // Display Paragraph Generator Page
 Route::get('/paragraph', function()
 {
+
+	$query = Input::get('paragraphs');
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs($query);
+	echo implode('<p class="results">', $paragraphs);
+
 	return View::make('paragraph');
 });
 
