@@ -15,18 +15,6 @@
 		{{ Form::submit('Generate') }}
 	{{ Form::close() }}
 
-<?php
 
-	$query = Input::get('users');
-
-	// use the factory to create a Faker\Generator instance
-	$faker = Faker\Factory::create();
-
-	// generate data by accessing properties
-	for ($i=0; $i < $query; $i++) {
-  	echo $faker->name, "<br>";
-}
-
-?>
 
 @stop
