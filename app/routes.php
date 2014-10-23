@@ -24,31 +24,13 @@ Route::get('/', function()
 });
 
 // Display Paragraph Generator Page
-Route::get('/paragraph/{number?}', function($number = null)
+Route::get('/paragraph', function()
 {
-	if ($number == null) {
-		return 'You must input a number from 1 to 99.';
-	} elseif ($number >= 1 && <= 99) {
-		return View::make('paragraph');
-	} else {
-		return 'Only numbers between 1 to 99 are accepted.';
-	}
-});
-
-//Display results from paragraph form
-Route::get('/paragraph/result', function() 
-{
-	return 'Paragraph Results';
+	return View::make('paragraph');
 });
 
 //Display User Generator Page
 Route::get('/user', function()
 {
 	return View::make('user');
-});
-
-//Display results from user form
-Route::get('/user/result', function()
-{
-	return 'User Results';
 });

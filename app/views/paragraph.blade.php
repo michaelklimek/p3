@@ -11,14 +11,15 @@
 		'url' => 'paragraph',
 		'method' => 'GET')) }}
 		{{ Form::label('number_paragraph', 'Number of Paragraphs to Generate (Max 99): ') }}
-		{{ Form::text('paragraphs') }}
+		{{ Form::number('paragraphs', '', array('min' => '1', 'max' => 99)) }}
 		{{ Form::submit('Generate') }}
 	{{ Form::close() }}
 	
 
 	<?php
+		$query = Input::get('paragraphs');
 		$generator = new Badcow\LoremIpsum\Generator();
-    	$paragraphs = $generator->getParagraphs(5);
+    	$paragraphs = $generator->getParagraphs($query);
     	echo implode('<p>', $paragraphs);
    	?>
 @stop
