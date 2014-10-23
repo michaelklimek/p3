@@ -1,4 +1,4 @@
-#Project Three - Paragraph and Random User Generators
+#Project Three - Developer's Best Friend
 
 ##Live URL:
 <http://p3.michaelklimek.com>

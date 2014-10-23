@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="title">
-	<h1>P3 - Paragraph and User Generators</h1>
+	<h1>Developer's Best Friend</h1>
 	<h4>The application produces paragraphs or random users depending on the quantity requested.
 		The paragraphs are written in Latin in a text called Lorem Ipsum. It is used to divert attention 
 		away from the content of a website, so that the focus is on the design and structure. The User Generator displays random users for 
